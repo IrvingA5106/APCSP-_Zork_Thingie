@@ -43,7 +43,7 @@ def room1():
         else:
             userAction = raw_input('Not a valid action.  Try Again! ')
     if 'door1' in openedDoors:
-        room2()
+        bedroom()
     else:
         room3()
         
@@ -76,7 +76,7 @@ def bedroom():
             playerItems += 'coin'
     elif userAction == 'open door 3':
         print("You open the door and move on.")
-        livingRoom()
+        room1()
         
 def room3():
     global enteredRooms
