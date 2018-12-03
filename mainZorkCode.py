@@ -87,10 +87,10 @@ def bedroom():
     print('You entered the library!')
     print("Empty bookshelves line the walls. On the side of the room, there is a weathered desk with a worn leather chair and a small golden statue on it.")
     print("There is a door to the west (door 4)")
-    if 'room3' in enteredRooms:
+    if 'library' in enteredRooms:
         print('This room looks vaguely familiar')
-    if 'room3' not in enteredRooms:
-            enteredRooms += ['room3']
+    if 'library' not in enteredRooms:
+            enteredRooms += ['library']
     if userAction == 'open door 4":
         print("The door is hard to open, but you get it eventually.") 
         livingRoom()    
