@@ -51,11 +51,13 @@ def bedroom():
     global playerItems
     global enteredRooms
     global openedDoors 
+    
     if 'bedroom' in enteredRooms:
         print('This room looks vaguely familiar')
     if 'bedroom' not in enteredRooms:
         enteredRooms += ['bedroom']
     print("You have entered the bedroom. There is a comfy looking bed in the center of the room, a chest at the foot of the bed, the door you just entered through, and large curtains covering a window on the wall.")
+    userAction = raw_input('What would you like to do? ')
     if userAction == 'open chest' and 'key1' in playerItems:
         print("You opened up the chest. Inside, there is a book, some matches, a red pocketknife, and a old jacket.")
         playerItems += 'book'
@@ -64,45 +66,51 @@ def bedroom():
         playerItems += 'pocketknife'
     elif userAction == 'open chest' and 'key1' not in playerItems:
         print("The chest is locked.")
-        userAction == raw_input("What would you like to do next?")
+        userAction == raw_input("What would you like to do next? ")
     elif userAction == 'read book' and 'book' in playerItems:
         print("The continent of Codalia, located on the continent of Normal West, is ruled by the gracious, intelligent and beautiful Queen Schermann. Its subjects are mostly teenage students, and occasionally other nobles, like Duke Scornovacco the Wise and Duke Beaty the Bearded") 
         print("You get bored and put the book down.")
-        userAction = raw_input("What would you like to do next?")
-    elif userAction == 'sleep on bed':
+        userAction = raw_input("What would you like to do next? ")
+    elif userAction == 'sleep on bed' or userAction == 'sit on bed':
         print("You lay down on the bed and close your eyes. When you open them again, the chair has moved to the other side of the room. Who was here?")
+        userAction = raw_input("What would you like to do next? ")
     elif userAction == 'wear jacket':
             print("You poke your arms through the sleeves of the jacket. It is musty, but surprisingly comfortable. You find a golden coin in the pocket.")
             playerItems += 'coin'
     elif userAction == 'open door 3':
         print("You open the door and move on.")
-        room1()
-        
-   def library():
+        livingRoom()
+    else:
+        print("I can't do that! Try again.")
+        userAction == raw_input("What would you like to do next? ")
+    
+def library():
     global enteredRooms
     global playerItems
     global openedDoors
     
     libraryItems = ['statue']
-    print('You entered the library!')
-    print("Empty bookshelves line the walls. On the side of the room, there is a weathered desk with a worn leather chair and a small golden statue on it.")
-    print("There is a door to the west (door 4)")
+
     if 'library' in enteredRooms:
         print('This room looks vaguely familiar')
     if 'library' not in enteredRooms:
-            enteredRooms += ['library']
-    if userAction == 'open door 4":
+            enteredRooms += ['room3']
+    print('You entered the library!')
+    print("Empty bookshelves line the walls. On the side of the room, there is a weathered desk with a worn leather chair and a small golden statue on it.")
+    print("There is a door to the west (door 4)")  
+    userAction = raw_input('What would you like to do? ')  
+    if userAction == 'open door 4':
         print("The door is hard to open, but you get it eventually.") 
         livingRoom()    
-    elif userAction == 'take statue' and 'statue' not in inventory:
-        print("You cautiously pick up the statue. Nothing happens. Dang, that was anticlimactic.")
+    elif userAction == 'take statue' and 'statue' not in playerItems:
+        print("\nYou cautiously pick up the statue. Nothing happens. Dang, that was anticlimactic.")
         print("...")
         print("...")
         print("Huh, what's that sound?\n")
         print("\nThe ceiling of the library disappears, revealing a huge wall of water. The water crashes down, filling the room. You take a deep breath before the water goes over your head...")
-        'statue' += playerItems
-        'statue' -= libraryItems
-        openedDoors -= 'door 4'
+        playerItems.append('statue')
+        libraryItems.remove('statue')
+        openedDoors.append('door 4')
         basement()
     elif userAction == 'sit at desk':
         print('You sit at the desk. Nothing happens.')
