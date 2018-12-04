@@ -1,7 +1,7 @@
 # This is a class that abstracts a direction that a player
 # can face.
 class Direction:
-    def __init__():
+    def __init__(self):
         self.direction = 0
 
     def turn_left(self):
@@ -17,7 +17,7 @@ class Direction:
             self.direction += 90
 
 class Player:
-    def __init__():
+    def __init__(self):
         self.items = [] # strings please
         self.visited_rooms = [] # strings please
         self.direction = Direction()

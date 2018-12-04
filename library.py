@@ -27,7 +27,7 @@ def library(player):
         print("...")
         print("Huh, what's that sound?\n")
         print("\nThe ceiling of the library disappears, revealing a huge wall of water. The water crashes down, filling the room. You take a deep breath before the water goes over your head...")
-        player.items.append(statue')
+        player.items.append('statue')
         libraryItems.remove('statue')
         openedDoors.append('door 4')
         basement()
