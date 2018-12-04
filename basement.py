@@ -1,46 +1,16 @@
-# This is a class that abstracts a direction that a player
-# can face.
-class Direction:
-    def __init__():
-        self.direction = 0
-
-    def turn_left(self):
-        if self.direction == 0:
-            self.direction = 270
-        else:
-            self.direction -= 90
-
-    def turn_right(self):
-        if self.direction == 270:
-            self.direction = 0
-        else:
-            self.direction += 90
-
-class Player:
-    def __init__():
-        self.items = [] # strings please
-
-    def has(self, item):
-        return item in self.items
-
-    def pick_up(self, item):
-        self.items.add(item)
-
 def basement(player):
     print "You're in a cold, pitch black room."
-    direction = Direction()
-
 
     while True:
         cmd = raw_input("> ")
         if cmd == "move forward" or cmd == "walk forward":
-            if direction == 180:
+            if player.direction == 180:
                 print "You trip over a box and fall to the floor."
             else:
                 print "You walk forward until you run into a damp, slimy wall."
         elif cmd == "turn left":
             print "Turned left."
-            direction.turn_left()
+            player.direction.turn_left()
         elif cmd == "turn right":
             print "Turned right."
             direction.turn_right()
