@@ -37,3 +37,6 @@ def basement(player):
             print "I don't understand '{}'".format(cmd)
     
     living_room(player)
+
+# If you run this file as a main
+basement(Player())

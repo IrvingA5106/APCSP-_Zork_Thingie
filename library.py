@@ -37,3 +37,6 @@ def library(player):
     else:
         print("I don't know how to do that. Try again!")
         userAction = input('What would you like to do next?')
+
+# If you run this module as main
+library(Player())
