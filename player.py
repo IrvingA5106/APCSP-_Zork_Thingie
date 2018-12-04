@@ -26,4 +26,4 @@ class Player:
         return item in self.items
 
     def pick_up(self, item):
-        self.items.add(item)
+        self.items.append(item)

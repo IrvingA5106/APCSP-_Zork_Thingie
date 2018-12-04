@@ -1,10 +1,13 @@
+from living_room import living_room
+
 def basement(player):
     print "You're in a cold, pitch black room."
-
-    while True:
+    in_basement = True
+    
+    while in_basement:
         cmd = raw_input("> ")
         if cmd == "move forward" or cmd == "walk forward":
-            if player.direction == 180:
+            if player.direction.direction == 180:
                 print "You trip over a box and fall to the floor."
             else:
                 print "You walk forward until you run into a damp, slimy wall."
@@ -13,7 +16,7 @@ def basement(player):
             player.direction.turn_left()
         elif cmd == "turn right":
             print "Turned right."
-            direction.turn_right()
+            player.direction.turn_right()
         elif cmd == "open box":
             print "You found a flashlight in the box!"
         elif cmd == "pick up flashlight":
@@ -29,6 +32,8 @@ def basement(player):
                 print "I don't understand '{}'".format(cmd)
             else:
                 print "Exiting trapdoor"
-                # go to a new room
+                in_basement = False
         else:
             print "I don't understand '{}'".format(cmd)
+    
+    living_room(player)
