@@ -30,7 +30,7 @@ def library(player):
         player.items.append('statue')
         libraryItems.remove('statue')
         openedDoors.append('door 4')
-        basement()
+        attic()
     elif userAction == 'sit at desk':
         print('You sit at the desk. Nothing happens.')
         userAction == input('What would you like to do next?')
