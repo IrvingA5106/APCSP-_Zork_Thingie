@@ -3,6 +3,7 @@ from player import Player
 def foyer(player):
     in_foyer = True
     dresser_items = ['key_foyer', 'flashlight']
+    player.add_room('foyer')
     
     print('You have entered the foyer')
     print('There are two doors in this room.  One to the left and one to the right.')

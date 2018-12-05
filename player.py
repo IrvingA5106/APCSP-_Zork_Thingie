@@ -23,16 +23,20 @@ class Player:
         self.items = [] # strings please
         self.visited_rooms = [] # strings please
         self.direction = Direction()
-
+    
+    """Determine if the user has an item in their inventory"""
     def has(self, item):
         return item in self.items
 
+    """Add an Item to a player's inventory"""
     def pick_up(self, item):
         if isinstance(item, types.ListType):
             self.items.extend(item)
         else:
             self.items.append(item)
     
+    """Add a room to the list of rooms a player has visted.
+    If they've already been there, print a message"""
     def add_room(self, room):
         if room in self.visited_rooms:
             print('This room looks vaguely familiar.')
