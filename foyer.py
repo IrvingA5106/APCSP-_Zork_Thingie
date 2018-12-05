@@ -34,3 +34,6 @@ def foyer(player):
         bedroom()
     else:
         room3()
+
+# If you run this module as main
+foyer(Player())

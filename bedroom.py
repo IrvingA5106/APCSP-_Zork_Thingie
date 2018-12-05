@@ -35,3 +35,6 @@ def bedroom(player):
     else:
         print("I can't do that! Try again.")
         userAction == raw_input("What would you like to do next? ")
+
+# If you run this module as main
+bedroom(Player())
