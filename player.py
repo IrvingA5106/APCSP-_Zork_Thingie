@@ -32,3 +32,9 @@ class Player:
             self.items.extend(item)
         else:
             self.items.append(item)
+    
+    def add_room(self, room):
+        if room in self.visited_rooms:
+            print('This room looks vaguely familiar.')
+        else:
+            self.visited_rooms.append(room)
