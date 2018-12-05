@@ -4,7 +4,6 @@ playerItems = []
 enteredRooms = []
 openedDoors = []
 
-
 def kitchen():
     global enteredRooms
     global playerItems
@@ -31,20 +30,3 @@ def kitchen():
             print('Invalid Action')
             userAction = raw_input('What would you like to do? ')
             
-            
-            
-def living_room():
-    global enteredRooms
-    global playerItems
-    exitRoom = False
-    print('You have entered the Living Room')
-    print('there is a door to the north.')
-    print('There is a dresser against the wall.')
-    print('There is a rug in the center of the room.')
-    print('There is a broken axe handle hanging on the wall.') 
-    if 'living_room' in enteredRooms:
-        enteredRooms =+ ['room3']
-        
-            
-        
-
