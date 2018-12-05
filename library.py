@@ -11,7 +11,7 @@ def library(player):
     if 'library' in player.visited_rooms:
         print('This room looks vaguely familiar')
     else:
-        enteredRooms += ['library']
+        enteredRooms.append('library')
     
     print('You entered the library!')
     print("Empty bookshelves line the walls. On the side of the room, there is a weathered desk with a worn leather chair and a small golden statue on it.")
@@ -20,6 +20,7 @@ def library(player):
     
     if userAction == 'open door 4':
         print("The door is hard to open, but you get it eventually.")
+        openedDoors.append('door 4')
         livingRoom()
     elif userAction == 'take statue' and 'statue' not in player.items:
         print("\nYou cautiously pick up the statue. Nothing happens. Dang, that was anticlimactic.")
@@ -29,7 +30,7 @@ def library(player):
         print("\nThe ceiling of the library disappears, revealing a huge wall of water. The water crashes down, filling the room. You take a deep breath before the water goes over your head...")
         player.items.append('statue')
         libraryItems.remove('statue')
-        openedDoors.append('door 4')
+        openedDoors.remove('door 4')
         attic()
     elif userAction == 'sit at desk':
         print('You sit at the desk. Nothing happens.')
