@@ -1,4 +1,6 @@
 from __future__ import print_function
+from basement import basement
+from foyer import foyer
       
 def living_room(player):
     exitRoom = False
@@ -17,30 +19,29 @@ def living_room(player):
 
         if userAction == 'open North door':
             print('This door is locked. Is there a key that you can use to open the door?')
-            exitRoom = True
-        elif userAction == 'open North door with key3':
+        elif userAction in ['open North door with key3', 'open North door with living room key']:
             print('you have opened the north door and entered the foyer')
             exitRoom = True
-        elif userAction == 'move the rug':
+            foyer(player)
+        elif userAction in ['move the rug', 'roll up the rug', 'move rug']:
             print('you have moved the rug')
             print('There is a trapdoor here that was covered by the rug')
-            exitRoom = False
-        elif userAction == 'open dresser drawer':
+        elif userAction in ['open dresser drawer', 'pull the dresser drawer open', 'pull open drawer', 'pull open dresser drawer'] :
             print('You have opened the dresser drawer.')
             print('there is a key2, key3, and a machete in the drawer.')
-        elif userAction == 'take dresser items':
+        elif userAction in ['take dresser items', 'grab items', 'take items', 'grab dresser items']:
             print('You have grabbed the key2, key3, and the Machete.')
-        elif userAction == 'open trapdoor':
+        elif userAction in ['open trapdoor', ' enter trapdoor']:
             print('The trapdoor is tied closed by a thick string.')
-        elif userAction == 'cut the string':
+        elif userAction in ['cut the string' ' cut string with the machete']:
             print(' You have cut the string and opened the trapdor.')
-            exitRoom = False
-        elif userAction == 'go into the trapdoor':
+        elif userAction in ['go into the trapdoor', ' enter trapdoor']:
             print('you have entered the west end of the basement')
             exitRoom = True
+            basement(player)
         else:
             print('Invalid Action')
-            userAction = raw_input('What would you like to do? ')
+            
             
     
 
