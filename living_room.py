@@ -39,6 +39,8 @@ def living_room(player):
             print('you have entered the west end of the basement')
             exitRoom = True
             basement(player)
+        elif userAction == 'scream':
+            print("Aaaaaahhhhh")
         else:
             print('Invalid Action')
             
