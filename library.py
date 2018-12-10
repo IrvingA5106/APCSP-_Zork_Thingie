@@ -25,6 +25,8 @@ def library(player):
             attic()
         elif user_action == 'sit at desk':
             print('You sit at the desk. Nothing happens.')
+        elif cmd == "scream":
+            print("Aaaaaahhhhhh")
         else:
             print("I don't know how to do that. Try again!")
 
