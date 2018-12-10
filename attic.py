@@ -29,6 +29,8 @@ def attic(player):
         elif userAction == 'open box' and wardrobe_open == True:
             print("You open the box. Inside, there is a silver knife and a dusty skull. You take both.")
             player.pick_up(attic_items)
+        elif userAction == 'scream':
+            print("Aaaaaaahhh")
         else:
             print("I can't do that! Try again!")
 

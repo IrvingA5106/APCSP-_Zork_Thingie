@@ -26,6 +26,8 @@ def foyer(player):
             dresser_items = []
         elif userAction == 'open left door' and not player.has('key_foyer'):
             print('The door will not open.')
+        elif userAction == "scream":
+            print("Aaaaaahhhhhh")
         elif userAction == 'open right door' and not player.has('flashlight'):
             print('You open the door, but it is so dark inside that you cannot see. You do not enter and you close the door.')
         else:

@@ -26,6 +26,8 @@ def kitchen(player):
         elif userAction == 'pick up items':
             print('you took', table_items)
             player.pick_up(table_items)
+        elif userAction == "scream":
+            print("Aaaaaahhhhhh")
         else:
             print('Invalid Action')
 
