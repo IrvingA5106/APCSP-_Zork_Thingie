@@ -1,6 +1,6 @@
 from __future__ import print_function
 from basement import basement
-from foyer enter foyer
+from foyer import foyer
       
 def living_room(player):
     exitRoom = False
@@ -22,6 +22,7 @@ def living_room(player):
         elif userAction in ['open North door with key3', 'open North door with living room key']:
             print('you have opened the north door and entered the foyer')
             exitRoom = True
+            foyer(player)
         elif userAction in ['move the rug', 'roll up the rug', 'move rug']:
             print('you have moved the rug')
             print('There is a trapdoor here that was covered by the rug')
@@ -37,6 +38,7 @@ def living_room(player):
         elif userAction in ['go into the trapdoor', ' enter trapdoor']:
             print('you have entered the west end of the basement')
             exitRoom = True
+            basement(player)
         else:
             print('Invalid Action')
             
