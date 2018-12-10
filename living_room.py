@@ -47,8 +47,11 @@ def living_room(player):
             basement(player)
         elif userAction == 'scream':
             print("Aaaaaahhhhh")
+        elif userAction in ['quit', 'q']:
+            print('you have left the game')
+            exitRoom = True
         else:
-            print('Invalid Action')
+            print("I don't know what " + userAction + " means.")
 
 if __name__ == "__main__":
     living_room(Player())

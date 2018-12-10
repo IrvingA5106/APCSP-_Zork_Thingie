@@ -27,12 +27,15 @@ def basement(player):
                 print "The room is small and damp with no windows or doors. There is a trapdoor in the ceiling."
             else:
                 print "I can't see anything!"
-        elif cmd == "open trapdoor":
+        elif cmd in ["open trapdoor", "enter trapdoor"]:
             if not player.has("flashlight"):
                 print "I don't understand '{}'".format(cmd)
             else:
                 print "Exiting trapdoor"
                 in_basement = False
+        elif userAction in ['quit', 'q']:
+            print('you have left the game')
+            exitRoom = True
         elif cmd == "scream":
             print("Aaaaaahhhhhh")
         else:

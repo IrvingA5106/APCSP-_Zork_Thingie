@@ -1,4 +1,5 @@
 from player import Player
+from living room import living room 
 
 def library(player):
     in_library = True
@@ -25,6 +26,9 @@ def library(player):
             attic()
         elif user_action == 'sit at desk':
             print('You sit at the desk. Nothing happens.')
+        elif userAction in ['quit', 'q']:
+            print('you have left the game')
+            exitRoom = True
         elif cmd == "scream":
             print("Aaaaaahhhhhh")
         else:

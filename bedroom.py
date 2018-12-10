@@ -13,6 +13,9 @@ def bedroom(player):
             print("You opened up the chest. Inside, there is a book, some matches, a red pocketknife, and a old jacket.")
             chest_items = ['book', 'matches', 'jacket', 'pocketknife']
             player.pick_up(chest_items)
+        elif userAction in ['quit', 'q']:
+            print('you have left the game')
+            exitRoom = True
         elif userAction == 'open chest' and not player.has('key1'):
             print("The chest is locked.")
         elif userAction == 'read book' and player.has('book'):
