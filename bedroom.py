@@ -1,3 +1,5 @@
+from player import Player
+
 def bedroom(player):
     in_bedroom = True
     player.add_room('bedroom')
@@ -27,5 +29,5 @@ def bedroom(player):
         else:
             print("I can't do that! Try again.")
 
-# If you run this module as main
-bedroom(Player())
+if __name__ == "__main__":
+    bedroom(Player())

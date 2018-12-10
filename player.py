@@ -5,13 +5,13 @@ import types
 class Direction:
     def __init__(self):
         self.direction = 0
-
+    
     def turn_left(self):
         if self.direction == 0:
             self.direction = 270
         else:
             self.direction -= 90
-
+    
     def turn_right(self):
         if self.direction == 270:
             self.direction = 0
@@ -27,7 +27,7 @@ class Player:
     """Determine if the user has an item in their inventory"""
     def has(self, item):
         return item in self.items
-
+    
     """Add an Item to a player's inventory"""
     def pick_up(self, item):
         if isinstance(item, types.ListType):

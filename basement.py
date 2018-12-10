@@ -1,3 +1,4 @@
+from player import Player
 from living_room import living_room
 
 def basement(player):
@@ -38,5 +39,5 @@ def basement(player):
     
     living_room(player)
 
-# If you run this file as a main
-basement(Player())
+if __name__ == "__main__":
+    basement(Player())

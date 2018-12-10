@@ -31,5 +31,5 @@ def foyer(player):
         else:
             print "I don't understand '{}'".format(userAction)
 
-# If you run this module as main
-foyer(Player())
+if __name__ == "__main__":
+    foyer(Player())

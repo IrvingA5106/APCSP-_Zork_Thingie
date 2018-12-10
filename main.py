@@ -4,7 +4,7 @@ from basement import basement
 from player import Player
 
 def startGame():
-    print('Welcome to the mysterious mansion')
+    print('Welcome to the mysterious mansion.')
     # raw_input('Press enter to start the game. ')
     player = Player()
     

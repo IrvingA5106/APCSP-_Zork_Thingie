@@ -32,5 +32,5 @@ def attic(player):
         else:
             print("I can't do that! Try again!")
 
-# For testing, run this file as main
-attic(Player())
+if __name__ == "__main__":
+    attic(Player())

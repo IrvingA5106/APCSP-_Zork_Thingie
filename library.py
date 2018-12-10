@@ -28,5 +28,5 @@ def library(player):
         else:
             print("I don't know how to do that. Try again!")
 
-# If you run this module as main
-library(Player())
+if __name__ == "__main__":
+    library(Player())
