@@ -3,30 +3,31 @@ from player import Player
 from foyer import foyer
 
 def kitchen(player):
+    exitRoom = False
+    table_items = ["candle", "key_kitchen", "rope"]
     
-    player.add_room('kitchen')
-    exitRoom = False    
     print("you have entered the Kitchen.")
     print("There is a table with some items lying there.")
-    print("there is a door to the South and a door to the East.")
+    print("there is a door to the south and a door to the east.")
     
-    table_items= ["candle", "key_kitchen", "rope"]
+    player.add_room('kitchen')
+    
     while exitRoom == False:
         userAction = raw_input('What would you like to do? ')
-        if userAction == 'open East door' and not player.has('key_kitchen'):
+        
+        if userAction == 'open east door' and not player.has('key_kitchen'):
             print("The door is locked. Do you have a key that you could use?")
-        elif userAction == 'open South door':
-            print("you have gone to the backyard")
-            exitRoom = True
-        elif userAction == 'grab the items from the table':
-            print('you took', table_items)
-            player.pick_up(table_items)
-            
-        elif userAction == 'open East door' and player.has('key_kitchen'):
-            print('You have entered the foyer')
+        elif userAction == 'open east door' and player.has('key_kitchen'):
             exitRoom = True
             foyer(player)
+        elif userAction == 'open south door':
+            print("You have gone to the backyard.")
+            exitRoom = True
+        elif userAction == 'pick up items':
+            print('you took', table_items)
+            player.pick_up(table_items)
         else:
             print('Invalid Action')
 
-kitchen(Player())
+if __name__ == "__main__":
+    kitchen(Player())
