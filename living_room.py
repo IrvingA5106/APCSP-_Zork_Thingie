@@ -8,7 +8,7 @@ def living_room(player):
     exitRoom = False
     
     print('You have entered the Living Room')
-    print('there is a door to the north.')
+    print('There is a door to the north.')
     print('There is a dresser with a drawer partly open against the wall.')
     print('There is a rug in the center of the room.')
     
@@ -37,10 +37,12 @@ def living_room(player):
             print('The trapdoor is tied closed by a thick string.')
         elif userAction in ['cut the string' ' cut string with the machete']:
             print(' You have cut the string and opened the trapdor.')
-        elif userAction in ['go into the trapdoor', ' enter trapdoor']:
+        elif userAction in ['go into the trapdoor', ' enter trapdoor', 'exit trapdoor']:
             print('you have entered the west end of the basement')
             exitRoom = True
             basement(player)
+        elif userAction == 'scream':
+            print("Aaaaaahhhhh")
         else:
             print('Invalid Action')
 
