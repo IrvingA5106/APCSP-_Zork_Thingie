@@ -1,7 +1,9 @@
 from __future__ import print_function
-from basement import basement
+
+from basement import *
+from player import Player
 from foyer import foyer
-      
+
 def living_room(player):
     exitRoom = False
     
@@ -16,7 +18,7 @@ def living_room(player):
     
     while exitRoom == False:
         userAction = raw_input('What would you like to do? ')
-
+        
         if userAction == 'open North door':
             print('This door is locked. Is there a key that you can use to open the door?')
         elif userAction in ['open North door with key3', 'open North door with living room key']:
@@ -41,11 +43,6 @@ def living_room(player):
             basement(player)
         else:
             print('Invalid Action')
-            
-            
-    
 
-        
-            
-        
-
+if __name__ == "__main__":
+    living_room(Player())

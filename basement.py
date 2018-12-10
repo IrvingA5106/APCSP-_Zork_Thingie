@@ -1,5 +1,5 @@
 from player import Player
-from living_room import living_room
+from living_room import *
 
 def basement(player):
     print "You're in a cold, pitch black room."
@@ -20,7 +20,6 @@ def basement(player):
             player.direction.turn_right()
         elif cmd == "open box":
             print "You found a flashlight in the box!"
-        elif cmd == "pick up flashlight" or cmd == "take flashlight":
             print "+1 flashlight"
             player.pick_up("flashlight")
         elif cmd == "look around":

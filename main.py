@@ -9,5 +9,6 @@ def startGame():
     player = Player()
     
     basement(player)
+    print('Congratulations! You escaped the house.')
 
 startGame()
