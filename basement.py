@@ -20,7 +20,7 @@ def basement(player):
             player.direction.turn_right()
         elif cmd == "open box":
             print "You found a flashlight in the box!"
-        elif cmd == "pick up flashlight":
+        elif cmd == "pick up flashlight" or cmd == "take flashlight":
             print "+1 flashlight"
             player.pick_up("flashlight")
         elif cmd == "look around":
@@ -34,6 +34,8 @@ def basement(player):
             else:
                 print "Exiting trapdoor"
                 in_basement = False
+        elif cmd == "scream":
+            print("Aaaaaahhhhhh")
         else:
             print "I don't understand '{}'".format(cmd)
     
