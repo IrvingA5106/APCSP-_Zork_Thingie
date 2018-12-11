@@ -77,7 +77,7 @@ def foyer(player):
         elif userAction == 'open right door' and not player.has('flashlight'):
             print('You open the door, but it is so dark inside that you cannot see. You do not enter and you close the door.')
         else:
-            print "I don't understand '{}'".format(userAction)
+            print ("I don't understand '{}'".format(userAction))
 
 def attic(player):
     wardrobe_open = False
@@ -146,44 +146,44 @@ def bedroom(player):
             print("I can't do that! Try again.")
             
 def basement(player):
-    print "You're in a cold, pitch black room."
+    print ("You're in a cold, pitch black room.")
     in_basement = True
     
     while in_basement:
-        cmd = raw_input("> ")
-        if cmd == "move forward" or cmd == "walk forward":
+        userAction = raw_input("> ")
+        if userAction == "move forward" or userAction == "walk forward":
             if player.direction.direction == 180:
-                print "You trip over a box and fall to the floor."
+                print ("You trip over a box and fall to the floor.")
             else:
-                print "You walk forward until you run into a damp, slimy wall."
-        elif cmd == "turn left":
-            print "Turned left."
+                print ("You walk forward until you run into a damp, slimy wall.")
+        elif userAction == "turn left":
+            print ("Turned left.")
             player.direction.turn_left()
-        elif cmd == "turn right":
-            print "Turned right."
+        elif userAction == "turn right":
+            print ("Turned right.")
             player.direction.turn_right()
-        elif cmd == "open box":
-            print "You found a flashlight in the box!"
-            print "+1 flashlight"
+        elif userAction == "open box":
+            print ("You found a flashlight in the box!")
+            print ("+1 flashlight")
             player.pick_up("flashlight")
-        elif cmd == "look around":
+        elif userAction == "look around":
             if player.has("flashlight"):
-                print "The room is small and damp with no windows or doors. There is a trapdoor in the ceiling."
+                print ("The room is small and damp with no windows or doors. There is a trapdoor in the ceiling.")
             else:
-                print "I can't see anything!"
-        elif cmd in ["open trapdoor", "enter trapdoor"]:
+                print ("I can't see anything!")
+        elif userAction in ["open trapdoor", "enter trapdoor"]:
             if not player.has("flashlight"):
-                print "I don't understand '{}'".format(cmd)
+                print ("I don't understand '{}'".format(userAction))
             else:
-                print "Exiting trapdoor"
+                print ("Exiting trapdoor")
                 in_basement = False
-        elif cmd in ['quit', 'q']:
+        elif userAction in ['quit', 'q']:
             print('you have left the game')
             in_basement = False
-        elif cmd == "scream":
+        elif userAction == "scream":
             print("Aaaaaahhhhhh")
         else:
-            print "I don't understand '{}'".format(cmd)
+            print ("I don't understand '{}'".format(userAction))
     
     living_room(player)
 
