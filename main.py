@@ -268,4 +268,4 @@ def kitchen(player):
         elif userAction == "scream":
             print("Aaaaaahhhhhh")
         else:
-            print('Invalid Action')
+            print("I don't know how to do that!")
