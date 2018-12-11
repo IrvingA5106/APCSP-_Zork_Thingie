@@ -1,5 +1,4 @@
 from player import Player
-from living room import living room 
 
 def library(player):
     in_library = True
