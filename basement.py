@@ -1,5 +1,5 @@
 from player import Player
-from living_room import *
+from living_room import living_room
 
 def basement(player):
     print "You're in a cold, pitch black room."
@@ -35,7 +35,7 @@ def basement(player):
                 in_basement = False
         elif cmd in ['quit', 'q']:
             print('you have left the game')
-            exitRoom = True
+            in_basement = False
         elif cmd == "scream":
             print("Aaaaaahhhhhh")
         else:
