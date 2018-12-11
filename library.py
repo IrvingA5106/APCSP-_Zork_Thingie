@@ -12,12 +12,12 @@ def library(player):
     player.add_room('library')
     
     while in_library:
-        user_action = raw_input('What would you like to do? ')
+        userAction = raw_input('What would you like to do? ')
         
-        if user_action == 'open west door':
+        if userAction == 'open west door':
             print("The door is hard to open, but you get it eventually.")
             livingRoom()
-        elif (user_action == 'take statue' or user_action == "pick up statue") and not player.has('statue'):
+        elif (userAction == 'take statue' or userAction == "pick up statue") and not player.has('statue'):
             print("\nYou cautiously pick up the statue. Nothing happens. Dang, that was anticlimactic.")
             print("...")
             print("...")
@@ -25,12 +25,12 @@ def library(player):
             print("\nThe ceiling of the library disappears, revealing a huge wall of water. The water crashes down, filling the room. You take a deep breath before the water goes over your head...")
             player.pick_up('statue')
             attic()
-        elif user_action == 'sit at desk':
+        elif userAction == 'sit at desk':
             print('You sit at the desk. Nothing happens.')
         elif userAction in ['quit', 'q']:
             print('you have left the game')
             exitRoom = True
-        elif cmd == "scream":
+        elif userAction == "scream":
             print("Aaaaaahhhhhh")
         else:
             print("I don't know how to do that. Try again!")
