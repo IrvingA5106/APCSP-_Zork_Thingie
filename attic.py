@@ -25,7 +25,6 @@ def attic(player):
             kitchen(player)
         elif userAction in ['quit', 'q']:
             print('you have left the game')
-            exitRoom = True
         elif userAction == 'open wardrobe':
             print('The wardrobe is filled with waterlogged coats. All of them look ruined. At the bottom of the wardrobe is a box carved out of stone.')
             wardrobe_open = True
