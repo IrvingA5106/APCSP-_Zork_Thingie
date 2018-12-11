@@ -1,4 +1,6 @@
 from player import Player
+from attic import attic
+from living_room import living_room
 
 def library(player):
     in_library = True
