@@ -26,6 +26,11 @@ def living_room(player):
             print('you have opened the north door and entered the foyer')
             exitRoom = True
             foyer(player)
+        elif userAction == 'look around':
+            print('You are in the Living Room')
+            print('There is a door to the north.')
+            print('There is a dresser with a drawer partly open against the wall.')
+            print('There is a rug in the center of the room.')
         elif userAction in ['move the rug', 'roll up the rug', 'move rug']:
             print('you have moved the rug')
             print('There is a trapdoor here that was covered by the rug')
