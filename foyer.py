@@ -15,11 +15,11 @@ def foyer(player):
         if userAction == 'open left door' and player.has('key_foyer'):
             print('The door slowly creaks open.')
             in_foyer = False
-            bedroom()
+            bedroom(player)
         elif userAction == 'open right door' and player.has('flashlight'):
             print('You open the door and can now see inside with the flashlight.')
             in_foyer = False
-            living_room()
+            living_room(player)
         elif userAction == 'open dresser':
             print('You picked up', dresser_items)
             player.pick_up(dresser_items)
