@@ -33,7 +33,7 @@ def basement(player):
             else:
                 print "Exiting trapdoor"
                 in_basement = False
-        elif userAction in ['quit', 'q']:
+        elif cmd in ['quit', 'q']:
             print('you have left the game')
             exitRoom = True
         elif cmd == "scream":
