@@ -120,14 +120,14 @@ def bedroom(player):
     while in_bedroom:
         userAction = raw_input('What would you like to do? ')
         
-        if userAction == 'open chest' and player.has('key1'):
+        if userAction == 'open chest' and player.has('chest_key'):
             print("You opened up the chest. Inside, there is a book, some matches, a red pocketknife, and a old jacket.")
             chest_items = ['book', 'matches', 'jacket', 'pocketknife']
             player.pick_up(chest_items)
         elif userAction in ['quit', 'q']:
             print('you have left the game')
             exitRoom = True
-        elif userAction == 'open chest' and not player.has('key1'):
+        elif userAction == 'open chest' and not player.has('chest_key'):
             print("The chest is locked.")
         elif userAction == 'read book' and player.has('book'):
             print("The continent of Codalia, located on the continent of Normal West, is ruled by the gracious, intelligent and beautiful Queen Schermann. Its subjects are mostly teenage students, and occasionally other nobles, like Duke Scornovacco the Wise and Duke Beaty the Bearded")
@@ -241,7 +241,7 @@ def living_room(player):
             
 def kitchen(player):
     exitRoom = False
-    table_items = ["candle", "key_kitchen", "rope"]
+    table_items = ["candle", "key_kitchen", "rope", "chest_key"]
     
     print("you have entered the Kitchen.")
     print("There is a table with some items lying there.")
