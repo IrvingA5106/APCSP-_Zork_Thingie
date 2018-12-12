@@ -1,7 +1,11 @@
 import types
 
-# This is a class that abstracts a direction that a player
-# can face.
+"""
+This is a class that abstracts a direction that a player
+can face. Direction.direction is public, and in degrees,
+so it's possible to compare against it for game logic
+"""
+# TODO: Add some comparison methods and a direction enum
 class Direction:
     def __init__(self):
         self.direction = 0
@@ -18,6 +22,11 @@ class Direction:
         else:
             self.direction += 90
 
+"""
+This class is responsible for holding on to global state things: namely
+the items that a player has picked up, but also the rooms they've visited,
+and dealing with directions if the logic for a room requires that (see basement)
+"""
 class Player:
     def __init__(self):
         self.items = [] # strings please
@@ -30,13 +39,17 @@ class Player:
     
     """Add an Item to a player's inventory"""
     def pick_up(self, item):
+        # Basically handle a list passed in differently than
+        # a single item
         if isinstance(item, types.ListType):
             self.items.extend(item)
         else:
             self.items.append(item)
     
-    """Add a room to the list of rooms a player has visted.
-    If they've already been there, print a message"""
+    """
+    Add a room to the list of rooms a player has visted.
+    If they've already been there, print a message
+    """
     def add_room(self, room):
         if room in self.visited_rooms:
             print('This room looks vaguely familiar.')

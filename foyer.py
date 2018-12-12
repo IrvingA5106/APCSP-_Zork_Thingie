@@ -23,7 +23,7 @@ def foyer(player):
             in_foyer = False
             living_room(player)
         elif userAction == 'open dresser':
-            print('You picked up', dresser_items)
+            print('You picked up {}'.format(dresser_items))
             player.pick_up(dresser_items)
             dresser_items = []
         elif userAction == 'open left door' and not player.has('key_foyer'):
