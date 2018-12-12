@@ -6,7 +6,7 @@ def basement(player):
     in_basement = True
     
     while in_basement:
-        cmd = raw_input("> ")
+        cmd = raw_input("What would you like to do? ")
         if cmd == "move forward" or cmd == "walk forward":
             if player.direction.direction == 180:
                 print "You trip over a box and fall to the floor."
