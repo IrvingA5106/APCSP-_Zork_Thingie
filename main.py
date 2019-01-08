@@ -9,8 +9,6 @@ def startGame():
     basement(player)
     print('Congratulations! You escaped the house.')
 
-startGame()
-
 def library(player):
     in_library = True
     
@@ -161,6 +159,10 @@ def basement(player):
         elif userAction == "turn right":
             print ("Turned right.")
             player.direction.turn_right()
+        elif userAction == "turn around":
+            player.direction.turn_right()
+            player.direction.turn_right()
+            print("Turned around")
         elif userAction == "open box":
             print ("You found a flashlight in the box!")
             print ("+1 flashlight")
@@ -268,3 +270,6 @@ def kitchen(player):
             print("Aaaaaahhhhhh")
         else:
             print("I don't know how to do that!")
+
+if __name__ == "__main__":
+    startGame()
